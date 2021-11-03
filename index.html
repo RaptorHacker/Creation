@@ -16,25 +16,27 @@ divcenter {
     border: 1px solid red;
     display: block;
 }form.new_form textarea {
-    width: 99%;
+    width: 100%;
     margin: 10px 0;
     height: 100px;
     resize: none;
     text-indent: 20px;
     padding: 12px 0;
 }form.new_form input[type="text"] {
-    width: 49%;
+    width: 100%;
+    margin: 1px 0;
     padding: 10px 0;
     text-indent: 15px;
 }form.new_form input {
-    width: 49%;
+    width: 50%;
     padding: 10px 0;
     text-indent: 15px;
 }form.new_form {
     width: 600px;
     border: 1px solid #cecece;
+
     display: block;
-    height: 210px;
+    height: 300px;
     padding: 40px;     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 3px 6px rgba(0,0,0,0.22);     margin: auto;
 }form.new_form input[type="submit"] {
     float: right;
@@ -61,48 +63,45 @@ divcenter {
 		</form>
 	</divcenter>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-<script>
+	<script>
 
-/**
-* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
-* You can use #id or any other CSS selector that will define the input field explicitly.
-* Example: "Email": "#MyEmailField".
-* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
-*/
-var config = {
-    fields: {
-        "FullName": "#name", // Name of a contact
-        "PhoneNumber": "#telephone", // Contact's mobile phone
-        "Email": "#email" // Contact's email
-    },
-    contactFields: {
-        "FullName": "#name", // Name of a contact
-        "Phone": "#telephone", // Contact's mobile phone
-        "Email": "#email" // Contact's email
-    },
-    customFields: {"WebFormId":"3c592dc6-631a-45ba-a22e-b5ad6a8417a2"},
-    landingId: "3c592dc6-631a-45ba-a22e-b5ad6a8417a2",
-    serviceUrl: "https://142-0273903-service-enterprise-demo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    redirectUrl: ""
-};
-/**
-* The function below creates a object from the submitted data.
-* Bind this function call to the "onSubmit" event of the form or any other elements events.
-* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-*/
-function createObject() {
-    landing.createObjectFromLanding(config);
-}
-/**
-* The function below inits landing page using URL parameters.
-*/
-function initLanding() {
-    landing.initLanding(config);
-}
-jQuery(document).ready(initLanding);
+		/**
+		* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+		* You can use #id or any other CSS selector that will define the input field explicitly.
+		* Example: "Email": "#MyEmailField".
+		* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+		*/
+		var config = {
+			fields: {
+				"FullName": "#name", // Name of a contact
+				"PhoneNumber": "#telephone", // Contact's mobile phone
+				"Email": "#email" // Contact's email
+			},
+			contactFields: {
+				"FullName": "#name", // Name of a contact
+				"Phone": "#telephone", // Contact's mobile phone
+				"Email": "#email" // Contact's email
+			},
+			customFields: {"WebFormId":"3c592dc6-631a-45ba-a22e-b5ad6a8417a2"},
+			landingId: "3c592dc6-631a-45ba-a22e-b5ad6a8417a2",
+			serviceUrl: "https://142-0273903-service-enterprise-demo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+			redirectUrl: ""
+		};
+		/**
+		* The function below creates a object from the submitted data.
+		* Bind this function call to the "onSubmit" event of the form or any other elements events.
+		* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+		*/
+		function createObject() {
+			landing.createObjectFromLanding(config);
+		}
+		/**
+		* The function below inits landing page using URL parameters.
+		*/
+		function initLanding() {
+			landing.initLanding(config);
+		}
+		jQuery(document).ready(initLanding);
 </script>
 </body>
 </html>
