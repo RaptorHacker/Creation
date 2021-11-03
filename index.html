@@ -50,7 +50,7 @@ divcenter {
 <body>
 	<divcenter>
 		<h2 class="forms">Форма обратной связи</h2>
-		<form method="post" class="new_form"> 
+		<form method="post" class="new_form" onsubmit="createObject(); return false">
 			<input type="text" name="name"  title="Введите ваше имя" id="name" placeholder="Имя"  required >
 			<input type="text" name="telephone" id="telephone" placeholder="Номер телефона" required>
 			<input type="text" name="email" id="email" placeholder="Почта" required>
@@ -59,7 +59,9 @@ divcenter {
 		</form>
 	</divcenter>
 
-<script src="js/jquery.min.js"></script>
+
+
+	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
