@@ -53,7 +53,7 @@ divcenter {
 <body>
 	<divcenter>
 		<h2 class="forms">Форма обратной связи</h2>
-		<form method="post" class="new_form" onsubmit="createObject(); return false">
+		<form method="post" class="new_form" onSubmit="createObject(); return false">
 			<input type="text" name="name"  title="Введите ваше имя" id="name" placeholder="Имя"  required >
 			<input type="text" name="telephone" id="telephone" placeholder="Номер телефона" required>
 			<input type="text" name="email" id="email" placeholder="Почта" required>
@@ -62,7 +62,9 @@ divcenter {
 
 		</form>
 	</divcenter>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
 	<script>
 
 		/**
@@ -73,19 +75,19 @@ divcenter {
 		*/
 		var config = {
 			fields: {
-				"FullName": "#name", // Name of a contact
-				"PhoneNumber": "#telephone", // Contact's mobile phone
-				"Email": "#email" // Contact's email
+				"FullName": "name", // Name of a contact
+				"PhoneNumber": "telephone", // Contact's mobile phone
+				"Email": "email" // Contact's email
 			},
 			contactFields: {
-				"FullName": "#name", // Name of a contact
-				"Phone": "#telephone", // Contact's mobile phone
-				"Email": "#email" // Contact's email
+				"FullName": "name", // Name of a contact
+				"Phone": "telephone", // Contact's mobile phone
+				"Email": "email" // Contact's email
 			},
 			customFields: {"WebFormId":"3c592dc6-631a-45ba-a22e-b5ad6a8417a2"},
 			landingId: "3c592dc6-631a-45ba-a22e-b5ad6a8417a2",
 			serviceUrl: "https://142-0273903-service-enterprise-demo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-			redirectUrl: ""
+			redirectUrl: "https://raptorhacker.github.io/Creation/"
 		};
 		/**
 		* The function below creates a object from the submitted data.
@@ -102,6 +104,6 @@ divcenter {
 			landing.initLanding(config);
 		}
 		jQuery(document).ready(initLanding);
-</script>
+	</script>
 </body>
 </html>
